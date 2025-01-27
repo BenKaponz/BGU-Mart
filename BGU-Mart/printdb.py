@@ -1,7 +1,7 @@
 from persistence import *
 
 def print_activities():
-    rows = repo.activities.find_all()
+    rows = sorted(repo.activities.find_all(), key=lambda activity: activity.date) 
     print("Activities")
     for activity in rows:
         print(activity)
@@ -54,7 +54,7 @@ def print_activities_report():
     employees = {employee.id: employee.name for employee in repo.employees.find_all()}
     suppliers = {supplier.id: supplier.name for supplier in repo.suppliers.find_all()}
 
-    activities = repo.activities.find_all()
+    activities = sorted(repo.activities.find_all(), key=lambda activity: activity.date) 
 
     print("Activities report")
     for activity in activities:
