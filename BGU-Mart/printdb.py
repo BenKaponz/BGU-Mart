@@ -7,25 +7,25 @@ def print_activities():
         print(activity)
 
 def print_branches():
-    rows = repo.branches.find_all()
+    rows = sorted(repo.branches.find_all(), key=lambda branch: branch.id)  
     print("Branches")
     for branch in rows:
         print(branch)
 
 def print_employees():
-    rows = repo.employees.find_all()
+    rows = sorted(repo.employees.find_all(), key=lambda employee: employee.id)  
     print("Employees")
     for employee in rows:
         print(employee)
 
 def print_products():
-    rows = repo.products.find_all()
+    rows = sorted(repo.products.find_all(), key=lambda product: product.id)  
     print("Products")
     for product in rows:
         print(product)
 
 def print_suppliers():
-    rows = repo.suppliers.find_all()
+    rows = sorted(repo.suppliers.find_all(), key=lambda supplier: supplier.id)  
     print("Suppliers")
     for supplier in rows:
         print(supplier)
@@ -36,7 +36,7 @@ def print_employees_report():
     activities = repo.activities.find_all()
     products = {product.id: product.price for product in repo.products.find_all()}
 
-    employees = sorted(employees, key=lambda emp: emp.name)
+    employees = sorted(employees, key=lambda emp: emp.name) 
 
     print("Employees report")
     for employee in employees:
@@ -54,7 +54,7 @@ def print_activities_report():
     employees = {employee.id: employee.name for employee in repo.employees.find_all()}
     suppliers = {supplier.id: supplier.name for supplier in repo.suppliers.find_all()}
 
-    activities = sorted(repo.activities.find_all(), key=lambda activity: activity.date) 
+    activities = sorted(repo.activities.find_all(), key=lambda activity: activity.date)  
 
     print("Activities report")
     for activity in activities:

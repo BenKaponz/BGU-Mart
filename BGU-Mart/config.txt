@@ -4,7 +4,6 @@ B,3,Chicago,40
 B,4,Houston,70
 B,5,Philadelphia,45
 B,6,Phoenix,55
-B,7,San Antonio,35
 B,8,San Diego,65
 B,9,Dallas,75
 B,10,San Jose,80
