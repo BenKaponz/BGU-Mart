@@ -1,7 +1,7 @@
 # 🛒 BGU Mart
 **Supermarket Management System – SPL 2025 @ BGU**
 
-A Python-based inventory and activity management system for supermarket chains, developed as part of the **Systems Programming Lab (SPL)** course at Ben-Gurion University.  
+A Python-based inventory and activity management system for supermarket chains, developed as part of the **Systems Programming (SPL)** course at Ben-Gurion University.  
 The system uses an SQLite3 database to track branches, employees, products, suppliers, and sales/delivery activities.
 
 ---
@@ -131,7 +131,7 @@ valgrind --leak-check=full --show-reachable=yes python3 action.py actions.txt
 ---
 
 ## 📚 Course Information
-- **Course:** SPL – Systems Programming Lab  
+- **Course:** SPL – Systems Programming  
 - **Institution:** Ben-Gurion University of the Negev  
 - **Year:** 2025  
 - **Environment:** Linux CS Lab, SQLite3, Python 3.9+
